@@ -293,10 +293,48 @@ p, span {
   background: url("../img/bg-slider-section.png") no-repeat center top; }
   .works__title {
     text-align: center;
-    padding-top: 50px; }
+    padding-top: 50px;
+    padding-bottom: 68px; }
     .works__title--name {
       padding-top: 36px;
       font-size: 36px;
       font-weight: 400;
       color: #fefcfd;
       text-transform: uppercase; }
+
+.main-slider {
+  position: relative;
+  padding-bottom: 100px; }
+
+.ba-slider {
+  width: 730px;
+  height: 546px;
+  margin: 0 auto; }
+
+.ba-slider img {
+  margin: 0 auto;
+  width: 730px;
+  height: 546px; }
+
+.prev {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  cursor: pointer; }
+
+.next {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  cursor: pointer; }
+
+.slick-dots li button:before {
+  content: '';
+  border: 2px solid white;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  text-align: center; }
+
+.slick-dots li.slick-active button:before {
+  background: white; }

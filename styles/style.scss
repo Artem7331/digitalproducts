@@ -1,9 +1,10 @@
 // @import 'normalize.css';
-// @import 'proxima-nova.css'
+// @import 'proxima-nova.css';
 
 body{
   padding:0px;
   margin:0px;
+  // font-family: 'proxima-nova';
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -277,6 +278,7 @@ p, span{
   &__title{
     text-align: center;
     padding-top: 50px;
+    padding-bottom: 68px;
 
     &--name{
       padding-top: 36px;
@@ -288,6 +290,58 @@ p, span{
   }
 }
 
+.main-slider{
+  position: relative;
+  padding-bottom:100px;
+}
+
+.ba-slider{
+   width: 730px;
+height: 546px;
+margin: 0 auto;
+
+}
+.ba-slider img{
+  margin: 0 auto;
+  width: 730px;
+height: 546px;
+
+}
+
+
+.prev{
+  position: absolute;
+  top:50%;
+  right: 0%;
+  cursor:pointer;
+}
+
+.next{
+ position: absolute;
+  top:50%;
+  left: 0%;
+  cursor:pointer;
+}
+
+// .slick-dots li button:before{
+//   content: '';
+//   color:white;
+//   border:1px solid grey;
+//   border-radius:50%;
+//   background:grey;
+// }
+
+.slick-dots li button:before {
+   content: '';
+   border: 2px solid white;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   text-align: center;
+}
+.slick-dots li.slick-active button:before{
+   background: white;
+}
 
 
 
