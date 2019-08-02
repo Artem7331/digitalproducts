@@ -3,34 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Digital products</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico" type="">
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/grid.css">
 	<link rel="stylesheet" type="text/css" href="styles/slick.css">
 	<link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
 	<link rel="stylesheet" href="styles/style.css">
+
 </head>
 <body>
-	<header class="header">
+	<header class="header" id="home">
 		<div class="container">
 			<nav class="header__nav">
 				<img src="img/logo.png" alt="Beetroot academy">
 					<ul>
 						<li class="header__nav-menu">
-							<a href="#">Home</a>
+							<a href="#home">
+								Home
+							</a>
 						</li>
 						<li class="header__nav-menu">
-							<a href="#">About</a>
+							<a href="#about">
+								About
+							</a>
 						</li>
 						<li class="header__nav-menu">
-							<a href="#">Services</a>
+							<a href="#services">
+								Services
+							</a>
 						</li>
 						<li class="header__nav-menu">
-							<a href="#">Works</a>
+							<a href="#works">
+								Works
+							</a>
 						</li>
 						<li class="header__nav-menu">
-							<a href="#">Contact</a>
+							<a href="#contact">
+								Contact
+							</a>
 						</li>
 					</ul>			
 			</nav>
@@ -45,7 +58,10 @@
 			</div>
 		</div>
 	</header>
-	<section class="about">
+	<a id="button">
+		<img src="img/arrow_top.png" alt="Climb up">
+	</a>
+	<section class="about" id="about">
 		<div class="container">
 			<div class="about-flex-position">
 				<div class="about-photo">
@@ -61,15 +77,27 @@
 						<strong>Morbi leo risus</strong>, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
 					</p>
 					<div class="about-info__btn">
-						<a href="#">Learn More</a>
+						<a href="#">
+							Learn More
+						</a>
 					</div>
 				</div>
 			</div>	
 		</div>
 	</section>
-	<section class="services">
+	<section class="services" id="services">
 		<div class="container">
 		    <div class="services__grid">
+		    	<div class="item item3 media-content">
+					<img src="img/services.png" alt="Our Services">
+			    	<h3 class="services__grid--title fix-margin fix-size">
+			    		Our Services
+			    	</h3>
+			    	<p class="services__grid--desc fix-margin">
+			    		“Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.”
+						<br>- Borat -
+			    	</p>
+				</div>
 			    <div class="item item1">
 			    	<img src="img/graphic.png" alt="Graphic Design">
 			    	<h3 class="services__grid--title">
@@ -88,16 +116,7 @@
 			    		Cras mattis consectetur purus sit amet fermentum.
 			    	</p>
 				</div>
-				<div class="item item3">
-					<img src="img/services.png" alt="Our Services">
-			    	<h3 class="services__grid--title fix-margin fix-size">
-			    		Our Services
-			    	</h3>
-			    	<p class="services__grid--desc fix-margin">
-			    		“Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.”
-						<br>- Borat -
-			    	</p>
-				</div>
+				
 				<div class="item item4">
 					<img src="img/SEO.png" alt="Seo & Marketing">
 			    	<h3 class="services__grid--title">
@@ -119,10 +138,10 @@
 		    </div>    
 		</div>
 	</section>
-	<section class="works">
+	<section class="works" id="works">
 		<div class="container">
 			<div class="works__title">
-				<img src="img/pan.png" alt="Recent Works">
+				<img src="img/pen.png" alt="Recent Works">
 				<h2 class="works__title--name">
 					Recent Works
 				</h2>
@@ -130,24 +149,294 @@
 			<div class="main-slider">		
 				<img class="prev" src="img/prev-arrow.png" alt="Arrow">
 				<img class="next" src="img/next-arrow.png" alt="Arrow">
-				<div class="ba-slider">
-				  <div>
-				  	<img src="img/slide-site-1.png">
-				  </div>
-				  <div>
-				  	<img src="img/slide-site-1.png">
-				  </div>
-				  <div>
-				  	<img src="img/slide-site-1.png">
-				  </div>
-				</div>
+					<div class="ba-slider">
+					  <div>
+					  	<img src="img/slide-photo-1.png">
+					  </div>
+					  <div>
+					  	<img src="img/slide-photo-2.png">
+					  </div>
+					  <div>
+					  	<img src="img/slide-photo-3.png">
+					  </div>
+					  <div>
+					  	<img src="img/slide-photo-4.png">
+					  </div>
+					</div>
 			</div>
-			
+			<div class="works__btn about-info__btn">
+				<a href="#">
+					View Gallery
+				</a>
+			</div>
 		</div>
 	</section>
+	<!-- <section class="team">
+		<div class="container">
+			<div class="team__title">
+				<img src="img/team.png" alt="Meet our team">
+				<h2>Meet our team</h2>
+			</div>
+			<div class="dev-team">	
+				<div id="dev-team__slider" class="dev-team__slider">
+					<div v-for="mate in team" 
+						 :key="mate.id" class="dev-team__slider-item">
+						<img :src="mate.avatar" alt="mate_photo" class="dev-team__mate-avatar">
+						<div class="dev-team__mate-info">
+							<h2 class="dev-team__mate-name">{{mate.name}}</h2>
+							<p class="dev-team__mate-position">{{mate.position}}</p>
+						</div>
+						<div class="dev-team__mate-social">
+							<a v-for="(value, key) in mate.social"
+							   :href="value"
+							   :class="key">gg</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+	<!-- с вью не получалось сделать адаптивный слайдер , по этому сделал по обычному( -->
+	<section class="team">
+            <div class="container">
+               <div class="team__title">
+					<img src="img/team.png" alt="Meet our team">
+					<h2>Meet our team</h2>
+				</div>
+                </div>
+                <div class="team__items">
+                	<img class="prev-arrow" src="img/prev-arrow-team.png" alt="Arrow">
+					<img class="next-arrow" src="img/next-arrow-team.png" alt="Arrow">
+                    <div class="slider-two">
+                        <div class="item">
+                            <div class="team__item">
+                        <div class="team__wrap-avatar"> 
+                            <img src="img/miguel.png" alt="miguel" class="team__avatar">
+                        </div>
+                        <h3 class="team__name">Miguel Obrien</h3>
+                        <span class="team__skills">Ceo & Founder</span>
+                        <div class=" team__wrap-social team__wrap-social--short">
+							<a href="https://www.facebook.com/">
+								<i class="sprite sprite-facebook"></i>
+							</a>
+							<a href="https://support.google.com/plus/?hl=ru#topic=9259565">
+								<i class="sprite sprite-google_"></i>
+							</a>
+							<a href="linkedin.com/in/артём-ковбасюк-857b05186">
+								<i class="sprite sprite-linked-in"></i>
+							</a>
+							<a href="https://twitter.com/">
+								<i class="sprite sprite-twitter"></i>
+							</a>
+                        </div>
+                            </div>
+                        </div>    
+                        <div class="item">
+                            <div class="team__item">
+                        <div class="team__wrap-avatar">
+                            <img src="img/jackie.png" alt="jackie" class="team__avatar">
+                        </div>
+                        <h3 class="team__name">Jackie Carroll</h3>
+                        <span class="team__skills">Art Director</span>
+                        <div class="team__wrap-social">
+			                 <a href="https://www.behance.net/">
+								<i class="sprite sprite-behance"></i>
+							</a>
+							<a href="https://www.facebook.com/">
+								<i class="sprite sprite-facebook"></i>
+							</a>
+							<a href="https://support.google.com/plus/?hl=ru#topic=9259565">
+								<i class="sprite sprite-google_"></i>
+							</a>
+							<a href="linkedin.com/in/артём-ковбасюк-857b05186">
+								<i class="sprite sprite-linked-in"></i>
+							</a>
+							<a href="https://twitter.com/">
+								<i class="sprite sprite-twitter"></i>
+							</a>
+                        </div>
+                            </div>
+                        </div>    
+                        <div class="item">
+                            <div class="team__item">
+                            <div class="team__wrap-avatar">
+                                <img src="img/ida.png" alt="ida" class="team__avatar">
+                            </div>
+                            <h3 class="team__name">Ida Morrison</h3>
+                            <span class="team__skills">Designer</span>
+                            <div class="team__wrap-social">
+                               <a href="https://www.behance.net/">
+								<i class="sprite sprite-behance"></i>
+							</a>
+							<a href="https://www.facebook.com/">
+								<i class="sprite sprite-facebook"></i>
+							</a>
+							<a href="https://support.google.com/plus/?hl=ru#topic=9259565">
+								<i class="sprite sprite-google_"></i>
+							</a>
+							<a href="linkedin.com/in/артём-ковбасюк-857b05186">
+								<i class="sprite sprite-linked-in"></i>
+							</a>
+							<a href="https://twitter.com/">
+								<i class="sprite sprite-twitter"></i>
+							</a>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="team__item">
+                        <div class="team__wrap-avatar"> 
+                            <img src="img/Miguel.png" alt="miguel" class="team__avatar">
+                        </div>
+                        <h3 class="team__name">Miguel Obrien</h3>
+                        <span class="team__skills">Ceo & Founder</span>
+                        <div class=" team__wrap-social team__wrap-social--short">
+                           <a href="https://www.facebook.com/">
+								<i class="sprite sprite-facebook"></i>
+							</a>
+							<a href="https://support.google.com/plus/?hl=ru#topic=9259565">
+								<i class="sprite sprite-google_"></i>
+							</a>
+							<a href="linkedin.com/in/артём-ковбасюк-857b05186">
+								<i class="sprite sprite-linked-in"></i>
+							</a>
+							<a href="https://twitter.com/">
+								<i class="sprite sprite-twitter"></i>
+							</a>
+                        </div>
+                            </div>
+                        </div>    
+                        <div class="item">
+                            <div class="team__item">
+                        <div class="team__wrap-avatar">
+                            <img src="img/jackie.png" alt="jackie" class="team__avatar">
+                        </div>
+                        <h3 class="team__name">Jackie Carroll</h3>
+                        <span class="team__skills">Art Director</span>
+                        <div class="team__wrap-social">
+                             <a href="https://www.behance.net/">
+								<i class="sprite sprite-behance"></i>
+							</a>
+							<a href="https://www.facebook.com/">
+								<i class="sprite sprite-facebook"></i>
+							</a>
+							<a href="https://support.google.com/plus/?hl=ru#topic=9259565">
+								<i class="sprite sprite-google_"></i>
+							</a>
+							<a href="linkedin.com/in/артём-ковбасюк-857b05186">
+								<i class="sprite sprite-linked-in"></i>
+							</a>
+							<a href="https://twitter.com/">
+								<i class="sprite sprite-twitter"></i>
+							</a>
+                        </div>
+                            </div>
+                        </div>    
+                        <div class="item">
+                            <div class="team__item">
+                            <div class="team__wrap-avatar">
+                                <img src="img/ida.png" alt="ida" class="team__avatar">
+                            </div>
+                            <h3 class="team__name">Ida Morrison</h3>
+                            <span class="team__skills">Designer</span>
+                            <div class="team__wrap-social">
+	                            <a href="https://www.behance.net/">
+									<i class="sprite sprite-behance"></i>
+								</a>
+								<a href="https://www.facebook.com/">
+									<i class="sprite sprite-facebook"></i>
+								</a>
+								<a href="https://support.google.com/plus/?hl=ru#topic=9259565">
+									<i class="sprite sprite-google_"></i>
+								</a>
+								<a href="linkedin.com/in/артём-ковбасюк-857b05186">
+									<i class="sprite sprite-linked-in"></i>
+								</a>
+								<a href="https://twitter.com/">
+									<i class="sprite sprite-twitter"></i>
+								</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	<section class="contacts" id="contact">
+		<div id="map"></div>
+		<div class="bg-opa">
+				<div class="contacts__title">
+					<img src="img/location.png" alt="">
+					<h2>
+						GET IN TOUCH
+					</h2>
+				</div>
+				<ul class="main-box">
+				  <li class="box-item">
+				    <span>
+				    	<img src="img/house.png" alt="Address">
+					</span>
+				    <p>
+				    	Ikan Piranha Atas 220C
+						Malang - East Java
+						Indonesia
+					</p>
+				  </li>
+				  <li class="box-item">
+				  	<span>
+				    	<img src="img/mini-phonne.png" alt="Phone Number">
+					</span>
+				    <p>
+				    	(486) 293-3071 & <br> (855) 629-6395
+					</p>
+				  </li>
+				  </li>
+				</ul>
+				<div class="container">
+				<form action="" class="railway">
+				  <div class="form-group">
+				    <input type="text" id="name" placeholder="Your Name *" required><label for="name"></label>
+				    <input type="text" id="email" placeholder="Your Email *" required><label for="email"></label>
+				    <textarea type="text" id="message" placeholder="Your Message *" required></textarea><label for="message"></label>
+				  </div>
+				  <div class="submit-block">
+					<button class="contact-btn">
+						SEND MESSAGE
+					</button>
+				  </div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrap clearfix">
+				<h5>
+					©2014 tulusdriyo. All Rights Reserved.
+				</h5>
+				<a href="https://www.behance.net/">
+					<i class="sprite sprite-behance"></i>
+				</a>
+				<a href="https://www.facebook.com/">
+					<i class="sprite sprite-facebook"></i>
+				</a>
+				<a href="https://support.google.com/plus/?hl=ru#topic=9259565">
+					<i class="sprite sprite-google_"></i>
+				</a>
+				<a href="linkedin.com/in/артём-ковбасюк-857b05186">
+					<i class="sprite sprite-linked-in"></i>
+				</a>
+				<a href="https://twitter.com/">
+					<i class="sprite sprite-twitter"></i>
+				</a>
+			</div>
+		</div>
+	</footer>
 	<script src="js/bundles/jquery-3.4.1.min.js"></script>
 	<script src="js/bundles/slick.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-Conpehdox7DavJ-IGmMAnSj4Q3wi1SQ&callback=initMap"
+    async defer></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
