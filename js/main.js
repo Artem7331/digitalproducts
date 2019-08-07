@@ -40,23 +40,47 @@ $(document).ready(function(){
   });
 });
 
-var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -7.9357193 , lng: 112.631773},
-          zoom: 15,
-          disableDefaultUI: true,
-          featureType: "poi",
-        elementType: "labels",
-        });
+function initMap() {
+    var centerMap   = {
+                      lat: -7.93502129,
+                      lng: 112.6336722 },
+        centerMarker = {
+                      lat: -7.9307459,
+                      lng: 112.6355 };
 
-        var image = 'img/marker.png';
-        var beachMarker = new google.maps.Marker({
-          position: {lat: -7.930100, lng: 112.637773},
-          map: map,
-          icon: image
-        })
-      }
+
+
+    var myMap    = document.getElementById('map');
+    myMap = new google.maps.Map(myMap, {
+    center: centerMap,
+    zoom: 16,
+    disableDefaultUI: true,
+    styles: [
+      {
+        "featureType": "landscape",
+         "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+        "featureType": "poi",
+          "stylers": [
+             {
+              "visibility": "off"
+              }
+            ]
+        }
+      ]
+    });
+
+  var marker = new google.maps.Marker({
+    position: centerMarker,
+    map: myMap,
+    icon: 'img/marker.png'
+  });
+}
 
 
   var btn = $('#button');
